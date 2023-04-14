@@ -12,7 +12,7 @@ export default function Main() {
   const programmingDup = programming.map((items) => {
     return{
       name: items.name + 'dup',
-      officialName: items.name,
+      // officialName: items.name,
       dup: true,
       image: items.image
     }
@@ -23,41 +23,78 @@ export default function Main() {
 
   const [itemName, setItemName] = useState(null)
 
-  const handleClick = (itemValue) => {
-    const gameItem = document.querySelectorAll('.game-item')
-    gameItem.forEach((items) => {
-      if(items.id === itemValue.name){
+  const refs = useRef(null)
+  console.log(refs)
+  const handleClick = (event) => {
+    const gameItems = document.querySelectorAll('.game-item')
+    // Map thru all items
+    gameItems.forEach((items) => {
+      // Check If the item that the user click matchs any Arreibute in the Items array
+      if(event.name === items.getAttribute('itemname')){
+        // Add an active class to this item
         items.classList.add('game-item-active')
-        setItemName(itemValue.officialName)
       }
     })
-  }
-
-  // 
-  useEffect(() => {
-    let timeOut
-    const gameItem = document.querySelectorAll('.game-item')
     // 
-    gameItem.forEach((items) => {
-      if(items.id !== itemName){
-        timeOut = setTimeout(() => {
-          items.classList.remove('game-item-active')
-          setItemName(null)
-          console.log('removed')
-        }, 500)
+    // Check if the item state have any value
+    if(!itemName){
+      console.log('if')
+      // Check if the name of the Item is duped and save A new value to the state
+      if(event.dup){
+        setItemName(event.name.split('').reverse().slice(3).reverse().join(''))
       }else{
-        // TODO: Add to Score
-        items.classList.add('game-item-active')
-        setItemName(null)
-        console.log('Equals')
+        setItemName(event.name)
       }
-    })
-
-    return () => {
-      clearTimeout(timeOut)
+    }else{
+      console.log('else')
+      // Check if the name of the Item is duped
+      if(event.dup){
+        console.log('duped')
+        // Check if the saved state of the prev item matchs the new one
+        if(event.name.split('').reverse().slice(3).reverse().join('') === itemName){
+          // TODO: Add to score
+          // items.classList.add('game-item-active')
+          console.log('scored dup')
+          // Clear the state for Looping
+          setItemName(null)
+        }else{
+          console.log('this duped => ',event.name )
+          setTimeout(() => {
+            gameItems.forEach((items) => {
+                  //javascriptdup === javascriptdup            //react === react
+              if(event.name === items.getAttribute('itemname') || itemName === items.getAttribute('itemname')){
+                items.classList.remove('game-item-active')
+              }
+            })
+          }, 500)
+          console.log('didn"t score dup')
+          setItemName(null)
+        }
+      }else{
+        console.log('not Dup')
+        if(event.name === itemName){
+          // TODO: Add to score
+          // items.classList.add('game-item-active')
+          console.log('scored no dup')
+          setItemName(null)
+        }else{
+          console.log('this not dup => ',event.name )
+          // TODO: Fix duped doesn't remove the class from both items
+          setTimeout(() => {
+            gameItems.forEach((items) => {
+              if(event.name === items.getAttribute('itemname') || itemName === items.getAttribute('itemname')){
+                items.classList.remove('game-item-active')
+              }
+            })
+          }, 500)
+          console.log('didn"t score no dup')
+          setItemName(null)
+        }
+      }
     }
-  }, [itemName])
-  
+  }
+  // 
+
   return (
     <>
       <Head>
@@ -82,6 +119,8 @@ export default function Main() {
                     handleClick(items)
                   }} style={{width: '110px', height: '120px'}} 
                   id={items.name} 
+                  ref={refs}
+                  itemname={items.name}
                   className='game-item p-0 m-0' key={items.name}>
                     <Image style={{objectFit: 'cover'}} className='game-item-front img-fluid h-100' src={'/images/questionmark.jpg'} height='1080' width='2040' alt={items.name || 'questionmark image'} />
                     <Image style={{objectFit: 'cover'}} className='game-item-side img-fluid h-100' src={items.image} height='1080' width='2040' alt={items.name || 'image alt'} />
