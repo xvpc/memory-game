@@ -1,0 +1,7 @@
+Add onClick event and change styles using Refs
+Match items
+Controll items using Order
+Score border and game options
+5*4 => 20
+
+

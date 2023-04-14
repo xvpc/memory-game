@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap&family=Cairo:wght@200;300;400;500;600;700;800;900;1000&family=Fuzzy+Bubbles&family=Nunito&family=Roboto:ital,wght@0,100;0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&family=Sedgwick+Ave+Display&display=swap');
+:root{
+    --main-color: #08d374;
+}
+*{
+    font-family: Sedgwick Ave Display, cursive, Roboto, Arial, Helvetica, sans-serif;
+}
+ul{
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style-type: none !important;
+}
+a,
+a:hover{
+    text-decoration: none !important;
+    /* color: white !important; */
+}
+.navbar-container,
+.footer-container{
+    transition: var(--main-transition);
+}
+/* Start Scrollbar */
+::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+    scroll-behavior: smooth;
+}
+::-webkit-scrollbar-track {
+    border: 10px solid black;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgba(222, 222, 223, 0.678);
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+    opacity: 0.7;
+}
+/* for Firefox */
+html {
+    scrollbar-color: rgba(222, 222, 223, 0.678) black;
+}
+/* End Scrollbar */
+
+/* Start Main */
+.game-item{
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all .5s linear;
+    cursor: pointer;
+}
+.game-item-front,
+.game-item-side{
+    position: absolute;
+}
+.game-item-front{
+    transform: translateZ(55px);
+}
+.game-item-side{
+    transform: rotateY(90deg) translateZ(55px);
+}
+.game-item-active{
+    transform: rotateY(90deg);
+}
+/* .game-item{
+    transform: rotateY(90deg);
+} */
+/* End Main */

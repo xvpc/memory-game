@@ -1,0 +1,42 @@
+[
+    {
+        "name": "html",
+        "image": "/images/programming/html.png"
+    },
+    {
+        "name": "css",
+        "image": "/images/programming/css.png"
+    },
+    {
+        "name": "javascript",
+        "image": "/images/programming/javascript.png"
+    },
+    {
+        "name": "csharp",
+        "image": "/images/programming/csharp.png"
+    },
+    {
+        "name": "c++",
+        "image": "/images/programming/c++.png"
+    },
+    {
+        "name": "ruby",
+        "image": "/images/programming/ruby.png"
+    },
+    {
+        "name": "docker",
+        "image": "/images/programming/docker.png"
+    },
+    {
+        "name": "java",
+        "image": "/images/programming/java.png"
+    },
+    {
+        "name": "python",
+        "image": "/images/programming/python.png"
+    },
+    {
+        "name": "react",
+        "image": "/images/programming/react.png"
+    }
+]
