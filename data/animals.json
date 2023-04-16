@@ -7,52 +7,52 @@
             {
                 "name": "cat",
                 "officialName": "cat",
-                "image": "/images/animals/cat.png"
+                "image": "./images/animals/cat.png"
             },
             {
                 "name": "dog",
                 "officialName": "dog",
-                "image": "/images/animals/dog.png"
+                "image": "./images/animals/dog.png"
             },
             {
                 "name": "hen",
                 "officialName": "hen",
-                "image": "/images/animals/hen.png"
+                "image": "./images/animals/hen.png"
             },
             {
                 "name": "jellyfish",
                 "officialName": "jellyfish",
-                "image": "/images/animals/jellyfish.png"
+                "image": "./images/animals/jellyfish.png"
             },
             {
                 "name": "lion",
                 "officialName": "lion",
-                "image": "/images/animals/lion.png"
+                "image": "./images/animals/lion.png"
             },
             {
                 "name": "octopus",
                 "officialName": "octopus",
-                "image": "/images/animals/octopus.png"
+                "image": "./images/animals/octopus.png"
             },
             {
                 "name": "panda",
                 "officialName": "panda",
-                "image": "/images/animals/panda.png"
+                "image": "./images/animals/panda.png"
             },
             {
                 "name": "snail",
                 "officialName": "snail",
-                "image": "/images/animals/snail.png"
+                "image": "./images/animals/snail.png"
             },
             {
                 "name": "rat",
                 "officialName": "rat",
-                "image": "/images/animals/rat.png"
+                "image": "./images/animals/rat.png"
             },
             {
                 "name": "cow",
                 "officialName": "cow",
-                "image": "/images/animals/cow.png"
+                "image": "./images/animals/cow.png"
             }
         ]
     }

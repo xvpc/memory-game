@@ -28,22 +28,41 @@ export default function Main() {
   const [currentGame, setCurrentGame] = useState(programming)
   const [score, setScore] = useState(0)
 
-  const handleShowItems = () => {
-    const gameItems = document.querySelectorAll('.game-item')
+  const handleRandomOrder = () => {
     setTimeout(() => {
-      gameItems.forEach((items) => {
-        items?.classList.add('game-item-active')
-      })
-    }, 500)
-    setTimeout(() => {
-      gameItems.forEach((items) => {
-        items?.classList.remove('game-item-active')
-      })
-    }, 1500)
+      if(loaded){
+        const gameItems = document.querySelectorAll('.game-item')
+        gameItems.forEach((items, index) => {
+          items.style = `order: ${Math.floor(Math.random() * index) || 0};`
+        })
+      }
+    }, 300)
   }
+
+  const handleShowItems = () => {
+    if(loaded){
+      const gameItems = document.querySelectorAll('.game-item')
+      setTimeout(() => {
+        gameItems.forEach((items) => {
+          items?.classList.add('game-item-active')
+        })
+      }, 500)
+      setTimeout(() => {
+        gameItems.forEach((items) => {
+          items?.classList.remove('game-item-active')
+        })
+      }, 1500)
+    }
+  }
+
   useEffect(() => {
+    // Loading
+    setLoaded(true)
+
+    handleRandomOrder()
     handleShowItems()
-  }, [])
+  }, [loaded, currentGame])
+
 
   useEffect(() => {
     const gameItems = document.querySelectorAll('.game-item')
@@ -100,6 +119,7 @@ export default function Main() {
         })
       }, 200)
     }
+
     // Reset game
     const handleReset = () => {
       counter = 0
@@ -111,18 +131,16 @@ export default function Main() {
           items?.classList.remove('game-item-active')
         })
       }, 200)
+      handleRandomOrder()
+      handleShowItems()
       console.log('Game Resets')
     }
     resetButton.addEventListener('click', handleReset)
 
     // Change game
     if(currentGame){
-      handleShowItems()
       setTimeout(() => {handleReset()}, 200)
     }
-
-    // Loading
-    setLoaded(true)
 
     // 
     return () => {
@@ -131,7 +149,7 @@ export default function Main() {
       clearTimeout(removeAllTimeOut)
       setLoaded(false)
     }
-  }, [currentGame])
+  }, [currentGame, loaded])
 
 
   return (
@@ -149,6 +167,7 @@ export default function Main() {
         <link rel="icon" type="image/png" sizes="32x32" href='./favicon/favicon-32x32.png'/>
         <link rel="icon" type="image/png" sizes="16x16" href='./favicon/favicon-16x16.png'/>
       </Head>
+
       <ul className="background">
         <li></li>
         <li></li>
@@ -156,6 +175,7 @@ export default function Main() {
         <li></li>
         <li></li>
       </ul>
+
       <div className='main-content d-flex flex-column justify-content-between align-items-center min-vh-100 w-100'>
         <main className='my-5 p-3 d-flex flex-column justify-content-center align-items-center gap-4'>
           <div className='py-2 px-3 border-bottom border-secondary w-auto d-flex flex-column justify-content-between align-items-center gap-2'>
@@ -170,7 +190,7 @@ export default function Main() {
                   <Dropdown.Item onClick={() => { setCurrentGame(programming)} }>Programming</Dropdown.Item>
                   <Dropdown.Item onClick={() => { setCurrentGame(animals)} }>Animals</Dropdown.Item>
                   <Dropdown.Item onClick={() => { setCurrentGame(food)} }>Food</Dropdown.Item>
-                  <Dropdown.Item onClick={() => { setCurrentGame(pepega)} }>Pepega <Image src={'/images/pepega.webp'} height='30' width='30' alt='pepega image' /></Dropdown.Item>
+                  <Dropdown.Item onClick={() => { setCurrentGame(pepega)} }>Pepega <Image src={'./images/pepega.webp'} height='30' width='30' alt='pepega image' /></Dropdown.Item>
                 </Dropdown.Menu>
               </Dropdown>
               <button style={{fontSize: '14px'}} type='button' className='game-reset-button btn btn-danger p-1'>Reset</button>

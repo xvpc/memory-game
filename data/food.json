@@ -7,52 +7,52 @@
             {
                 "name": "bibimbap",
                 "officialName": "bibimbap",
-                "image": "/images/food/bibimbap.png"
+                "image": "./images/food/bibimbap.png"
             },
             {
                 "name": "salad",
                 "officialName": "salad",
-                "image": "/images/food/salad.png"
+                "image": "./images/food/salad.png"
             },
             {
                 "name": "hamburger",
                 "officialName": "hamburger",
-                "image": "/images/food/hamburger.png"
+                "image": "./images/food/hamburger.png"
             },
             {
                 "name": "hot-pot",
                 "officialName": "hot-pot",
-                "image": "/images/food/hot-pot.png"
+                "image": "./images/food/hot-pot.png"
             },
             {
                 "name": "pizza",
                 "officialName": "pizza",
-                "image": "/images/food/pizza.png"
+                "image": "./images/food/pizza.png"
             },
             {
                 "name": "ramen",
                 "officialName": "ramen",
-                "image": "/images/food/ramen.png"
+                "image": "./images/food/ramen.png"
             },
             {
                 "name": "donut",
                 "officialName": "donut",
-                "image": "/images/food/donut.png"
+                "image": "./images/food/donut.png"
             },
             {
                 "name": "healthy-eating",
                 "officialName": "healthy-eating",
-                "image": "/images/food/healthy-eating.png"
+                "image": "./images/food/healthy-eating.png"
             },
             {
                 "name": "drink",
                 "officialName": "drink",
-                "image": "/images/food/drink.png"
+                "image": "./images/food/drink.png"
             },
             {
                 "name": "sushi",
                 "officialName": "sushi",
-                "image": "/images/food/sushi.png"
+                "image": "./images/food/sushi.png"
             }
         ]
     }

@@ -7,52 +7,52 @@
             {
                 "name": "html",
                 "officialName": "html",
-                "image": "/images/programming/html.jpg"
+                "image": "./images/programming/html.jpg"
             },
             {
                 "name": "css",
                 "officialName": "css",
-                "image": "/images/programming/css.webp"
+                "image": "./images/programming/css.webp"
             },
             {
                 "name": "javascript",
                 "officialName": "javascript",
-                "image": "/images/programming/javascript.png"
+                "image": "./images/programming/javascript.png"
             },
             {
                 "name": "csharp",
                 "officialName": "csharp",
-                "image": "/images/programming/csharp.png"
+                "image": "./images/programming/csharp.png"
             },
             {
                 "name": "c++",
                 "officialName": "c++",
-                "image": "/images/programming/c++.png"
+                "image": "./images/programming/c++.png"
             },
             {
                 "name": "ruby",
                 "officialName": "ruby",
-                "image": "/images/programming/ruby.png"
+                "image": "./images/programming/ruby.png"
             },
             {
                 "name": "docker",
                 "officialName": "docker",
-                "image": "/images/programming/docker.png"
+                "image": "./images/programming/docker.png"
             },
             {
                 "name": "java",
                 "officialName": "java",
-                "image": "/images/programming/java.png"
+                "image": "./images/programming/java.png"
             },
             {
                 "name": "python",
                 "officialName": "python",
-                "image": "/images/programming/python.webp"
+                "image": "./images/programming/python.webp"
             },
             {
                 "name": "react",
                 "officialName": "react",
-                "image": "/images/programming/react.png"
+                "image": "./images/programming/react.png"
             }
         ]
     }
