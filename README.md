@@ -12,7 +12,7 @@ Demo [memory-game](https://xvpc.github.io/memory-game/)
 ![Site2 Image](./public/images/siteimgs/site2.png)
 
 # Icons
-I get Most of my Icons and Images From 
+I got Most of the Icon and Images From 
 [flaticon.com](https://www.flaticon.com/)
 
 Background is From 
