@@ -1,7 +1,6 @@
 # Memory Game
 
-## Demo
-- [memory-game](https://xvpc.github.io/memory-game/)
+Demo [memory-game](https://xvpc.github.io/memory-game/)
 
 ## Technologies
 - HTML/CSS/JAVASCRIPT
@@ -14,8 +13,8 @@
 
 # Icons
 I get Most of my Icons and Images From 
-![flaticon.com](https://www.flaticon.com/)
+[flaticon.com](https://www.flaticon.com/)
 
 Background is From 
-![wweb.dev](https://wweb.dev/resources/animated-css-background-generator)
+[wweb.dev](https://wweb.dev/resources/animated-css-background-generator)
 
