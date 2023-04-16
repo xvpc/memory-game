@@ -147,12 +147,12 @@
             {
                 "name": "rat",
                 "officialName": "rat",
-                "image": "/../public/images/animals/rat.png"
+                "image": "/images/animals/rat.png"
             },
             {
                 "name": "cow",
                 "officialName": "cow",
-                "image": "/../public/images/animals/cow.png"
+                "image": "/images/animals/cow.png"
             }
         ]
     }
