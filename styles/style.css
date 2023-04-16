@@ -3,7 +3,8 @@
     --main-color: #08d374;
 }
 *{
-    font-family: Sedgwick Ave Display, cursive, Roboto, Arial, Helvetica, sans-serif;
+    font-family: cursive, Roboto, Arial, Helvetica, sans-serif;
+    color: white;
 }
 ul{
     margin: 0 !important;
@@ -15,7 +16,6 @@ a:hover{
     text-decoration: none !important;
     /* color: white !important; */
 }
-.navbar-container,
 .footer-container{
     transition: var(--main-transition);
 }
@@ -42,27 +42,124 @@ html {
 }
 /* End Scrollbar */
 
+/* Start Background */
+@keyframes animate {
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+}
+.background {
+    z-index: -1;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    /* background: #0c456ba6; */
+    background: #0e8ef0c4;
+    overflow: hidden;
+}
+.background li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 37s linear infinite;
+}
+
+.background li:nth-child(0) {
+    left: 26%;
+    width: 156px;
+    height: 156px;
+    bottom: -156px;
+    animation-delay: 1s;
+}
+.background li:nth-child(1) {
+    left: 80%;
+    width: 113px;
+    height: 113px;
+    bottom: -113px;
+    animation-delay: 1s;
+}
+.background li:nth-child(2) {
+    left: 77%;
+    width: 148px;
+    height: 148px;
+    bottom: -148px;
+    animation-delay: 9s;
+}
+.background li:nth-child(3) {
+    left: 89%;
+    width: 75px;
+    height: 75px;
+    bottom: -75px;
+    animation-delay: 4s;
+}
+.background li:nth-child(4) {
+    left: 33%;
+    width: 126px;
+    height: 126px;
+    bottom: -126px;
+    animation-delay: 11s;
+}
+/* End Background */
+
 /* Start Main */
 .game-item{
     position: relative;
     transform-style: preserve-3d;
     transition: all .5s linear;
     cursor: pointer;
+    width: 70px;
+    height: 80px;
 }
 .game-item-front,
 .game-item-side{
     position: absolute;
 }
 .game-item-front{
-    transform: translateZ(55px);
+    background: rgb(238,174,202);
+    background: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    transform: translateZ(35px);
 }
 .game-item-side{
-    transform: rotateY(90deg) translateZ(55px);
+    transform: rotateY(90deg) translateZ(35px);
 }
 .game-item-active{
-    transform: rotateY(90deg);
+    transform: rotateY(-90deg);
+}
+@media screen and (min-width: 380px) {
+    .game-item{
+        width: 110px;
+        height: 120px;
+    }
+    .game-item-front{
+        transform: translateZ(55px);
+    }
+    .game-item-side{
+        transform: rotateY(90deg) translateZ(55px);
+    }
 }
 /* .game-item{
-    transform: rotateY(90deg);
+    transform: rotateY(-90deg);
 } */
 /* End Main */
+
+/* Start Footer */
+.footer-container span,
+.footer-container h4{
+    font-size: 20px;
+    font-family: Sedgwick Ave Display, cursive, Roboto, Arial, Helvetica, sans-serif;
+}
+/* End Footer */

@@ -1,0 +1,159 @@
+[
+    {
+        "type": "pepega"
+    },
+    {
+        "items": [
+            {
+                "name": "html",
+                "officialName": "html",
+                "image": "/images/programming/html.jpg"
+            },
+            {
+                "name": "css",
+                "officialName": "css",
+                "image": "/images/programming/css.webp"
+            },
+            {
+                "name": "javascript",
+                "officialName": "javascript",
+                "image": "/images/programming/javascript.png"
+            },
+            {
+                "name": "csharp",
+                "officialName": "csharp",
+                "image": "/images/programming/csharp.png"
+            },
+            {
+                "name": "c++",
+                "officialName": "c++",
+                "image": "/images/programming/c++.png"
+            },
+            {
+                "name": "ruby",
+                "officialName": "ruby",
+                "image": "/images/programming/ruby.png"
+            },
+            {
+                "name": "docker",
+                "officialName": "docker",
+                "image": "/images/programming/docker.png"
+            },
+            {
+                "name": "java",
+                "officialName": "java",
+                "image": "/images/programming/java.png"
+            },
+            {
+                "name": "python",
+                "officialName": "python",
+                "image": "/images/programming/python.webp"
+            },
+            {
+                "name": "react",
+                "officialName": "react",
+                "image": "/images/programming/react.png"
+            },
+            {
+                "name": "bibimbap",
+                "officialName": "bibimbap",
+                "image": "/images/food/bibimbap.png"
+            },
+            {
+                "name": "salad",
+                "officialName": "salad",
+                "image": "/images/food/salad.png"
+            },
+            {
+                "name": "hamburger",
+                "officialName": "hamburger",
+                "image": "/images/food/hamburger.png"
+            },
+            {
+                "name": "hot-pot",
+                "officialName": "hot-pot",
+                "image": "/images/food/hot-pot.png"
+            },
+            {
+                "name": "pizza",
+                "officialName": "pizza",
+                "image": "/images/food/pizza.png"
+            },
+            {
+                "name": "ramen",
+                "officialName": "ramen",
+                "image": "/images/food/ramen.png"
+            },
+            {
+                "name": "donut",
+                "officialName": "donut",
+                "image": "/images/food/donut.png"
+            },
+            {
+                "name": "healthy-eating",
+                "officialName": "healthy-eating",
+                "image": "/images/food/healthy-eating.png"
+            },
+            {
+                "name": "drink",
+                "officialName": "drink",
+                "image": "/images/food/drink.png"
+            },
+            {
+                "name": "sushi",
+                "officialName": "sushi",
+                "image": "/images/food/sushi.png"
+            },
+            {
+                "name": "cat",
+                "officialName": "cat",
+                "image": "/images/animals/cat.png"
+            },
+            {
+                "name": "dog",
+                "officialName": "dog",
+                "image": "/images/animals/dog.png"
+            },
+            {
+                "name": "hen",
+                "officialName": "hen",
+                "image": "/images/animals/hen.png"
+            },
+            {
+                "name": "jellyfish",
+                "officialName": "jellyfish",
+                "image": "/images/animals/jellyfish.png"
+            },
+            {
+                "name": "lion",
+                "officialName": "lion",
+                "image": "/images/animals/lion.png"
+            },
+            {
+                "name": "octopus",
+                "officialName": "octopus",
+                "image": "/images/animals/octopus.png"
+            },
+            {
+                "name": "panda",
+                "officialName": "panda",
+                "image": "/images/animals/panda.png"
+            },
+            {
+                "name": "snail",
+                "officialName": "snail",
+                "image": "/images/animals/snail.png"
+            },
+            {
+                "name": "rat",
+                "officialName": "rat",
+                "image": "./images/animals/rat.png"
+            },
+            {
+                "name": "cow",
+                "officialName": "cow",
+                "image": "./images/animals/cow.png"
+            }
+        ]
+    }
+]
