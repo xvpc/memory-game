@@ -3,12 +3,14 @@ import React, {useState, useEffect} from 'react'
 // 
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link';
 
 // 
 import GameContainer from '@/components/GameContainer';
 
 // 
 import Dropdown from 'react-bootstrap/Dropdown';
+import Spinner from 'react-bootstrap/Spinner';
 
 // 
 import programming from '../data/programming.json'
@@ -16,8 +18,12 @@ import food from '../data/food.json'
 import animals from '../data/animals.json'
 import pepega from '../data/pepega.json'
 
+// 
+import { AiFillGithub } from "react-icons/ai";
+
 export default function Main() {
-  
+  const [loaded, setLoaded] = useState(false)
+
   // Game Functionality
   const [currentGame, setCurrentGame] = useState(programming)
   const [score, setScore] = useState(0)
@@ -115,11 +121,15 @@ export default function Main() {
       setTimeout(() => {handleReset()}, 200)
     }
 
+    // Loading
+    setLoaded(true)
+
     // 
     return () => {
       resetButton.removeEventListener('click', handleReset)
       clearTimeout(clickTimeOut)
       clearTimeout(removeAllTimeOut)
+      setLoaded(false)
     }
   }, [currentGame])
 
@@ -167,7 +177,10 @@ export default function Main() {
             </div>
           </div>
           {
+            loaded ?
             currentGame ? <GameContainer game={currentGame} /> : <h2>Something Went Wrong!</h2>
+            :
+            <Spinner animation="border" variant="secondary" />
           }
           
         </main>
@@ -175,7 +188,8 @@ export default function Main() {
         <footer className='w-100 bg-info h-auto d-flex justify-content-center align-items-center'>
           <div className='footer-container container p-1 d-flex flex-row justify-content-center align-items-center gap-3'>
             <span className='me-2 p-0 m-0'>Created By:</span>
-            <h4 className='fw-bold p-0 m-0'>Viper</h4>
+            <h4 className='fw-bold p-0 m-0'>Viper</h4> |
+            <Link title='GitHub' href='https://github.com/xvpc/memory-game' target='_blank'><AiFillGithub className='bg-dark fs-3 p-1' /></Link>
           </div>
         </footer>
       </div>

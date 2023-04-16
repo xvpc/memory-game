@@ -6,7 +6,9 @@ Controll items using Random Order
 
 
 -=-=-=-=-=-=--=-=-=-=-
-
+Add GitHub to the footer
+~ Fix paths 
+Fix loading in Production
 -=-=-=-=-=-=--=-=-=-=-
 5*4 => 20
 
