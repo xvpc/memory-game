@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Asap&family=Cairo:wght@200;300;400;500;600;700;800;900;1000&family=Fuzzy+Bubbles&family=Nunito&family=Roboto:ital,wght@0,100;0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&family=Sedgwick+Ave+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,900;1,300;1,400&family=Sigmar&display=swap');
 :root{
     --main-color: #08d374;
 }
@@ -157,9 +157,8 @@ html {
 /* End Main */
 
 /* Start Footer */
-.footer-container span,
-.footer-container h4{
-    font-size: 20px;
-    font-family: Sedgwick Ave Display, cursive, Roboto, Arial, Helvetica, sans-serif;
+footer div p,
+footer div p span{
+    font-family: Dancing Script, Arial, Helvetica, sans-serif;
 }
 /* End Footer */
